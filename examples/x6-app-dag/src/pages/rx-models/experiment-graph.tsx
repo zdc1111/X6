@@ -1,13 +1,14 @@
 /* tslint:disable no-this-assignment */
+
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { ANT_PREFIX } from '@/constants/global'
-import classnames from 'classnames'
-import { BehaviorSubject, fromEventPattern, timer, Subscription } from 'rxjs'
-import { filter, take } from 'rxjs/operators'
-import { round } from 'lodash-es'
-import produce from 'immer'
 import { ConfigProvider, message, Tooltip } from 'antd'
+import { BehaviorSubject, fromEventPattern, timer, Subscription } from 'rxjs'
+import produce from 'immer'
+import { filter, take } from 'rxjs/operators'
+import classnames from 'classnames'
+import { round } from 'lodash-es'
 import { RERENDER_EVENT } from '@/constants/graph'
 import { GraphCore, ConnectionRemovedArgs } from './graph-core'
 import {
@@ -121,6 +122,7 @@ class ExperimentGraph extends GraphCore<BaseNode, BaseEdge> {
       keyboard: {
         enabled: true,
       },
+      history: true,
       connecting: {
         snap: { radius: 10 },
         dangling: false,

@@ -178,7 +178,6 @@ export class GraphCore<
           graph.off('node:contextmenu', handler)
         },
       )
-
       const edgeContextMenuObs = fromEventPattern<ContextMenuInfo>(
         (handler) => {
           graph.on('edge:contextmenu', (data) => {
